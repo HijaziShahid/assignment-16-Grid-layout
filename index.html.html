@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+        .container{
+            display: grid;
+            grid-template-columns: repeat(4 ,1fr);
+            grid-template-rows: 50px 350px 120px 120px 100px;
+        }
+        [class^=box]{
+            font-size: 30px;
+            font-weight: bolder;
+            font-family: Arial, Helvetica, sans-serif;
+            
+        }
+        .box1{
+            background-color: darkblue;
+            text-align: center;
+            
+        }
+        .box2{
+            background-color: red;
+            text-align: center;
+            grid-column: span 3;
+        }
+        .box3{
+            background-color: blue;
+            text-align: center;
+            grid-column: span 4;
+        }
+        .box4{
+            background-color: darkblue;
+            text-align: center;
+            grid-column: span 2;
+            grid-row: span 2;
+        }
+        .box5{
+            background-color: rgb(144, 242, 246);
+            text-align: center;
+            grid-column: 4;
+        }
+        .box6{
+            background-color: rgb(4, 192, 120);
+            text-align: center;
+            grid-column: 4;
+        }
+        .box7{
+            background-color: rgb(252, 252, 75);
+            text-align: center;
+            grid-column: span 4;
+            
+        }
+
+        @media (max-width: 700px) {
+            .container{
+            display: grid;
+            grid-template-columns: repeat(4 ,1fr);
+            grid-template-rows: 40px 300px 100px 100px 80px;
+        }
+         .box1{
+            background-color: darkblue;
+            text-align: center;
+            grid-column: span 4;
+        }
+        .box2{
+            background-color: red;
+            text-align: center;
+            grid-row: span 6;
+            grid-column: span 1;
+        }
+        .box3{
+            background-color: blue;
+            text-align: center;
+            grid-column: span 4;
+            grid-row: 2;
+        }
+        .box4{
+            background-color: darkblue;
+            text-align: center;
+            grid-column: span 3;
+            grid-row: span 2;
+        }
+        .box5{
+            background-color: rgb(144, 242, 246);
+            text-align: center;
+            grid-row:8 ;
+            grid-column:4/ span 1;
+        }
+        .box6{
+            background-color: rgb(4, 192, 120);
+            text-align: center;
+            grid-row:8 ;
+            grid-column:2/ span 2;
+        }
+        .box7{
+            background-color: rgb(252, 252, 75);
+            text-align: center;
+            grid-column: span 3;
+            
+        }   
+        }
+
+        @media (max-width: 400px) {
+            .container{
+            /* display: grid; */
+            grid-template-columns: repeat(4 , 1fr);
+            grid-template-rows: 50px 50px 145px 145px 90px 90px 90px;
+        }
+         .box1{
+            background-color: pink;
+            text-align: center;
+            grid-column: span 4;
+        }
+        .box2{
+            background-color: red;
+            text-align: center;
+            
+            grid-column: span 4 ;
+            grid-row: 2;
+        }
+        .box3{
+            background-color: blue;
+            text-align: center;
+            grid-column: span 4;
+            grid-row: 3;
+        }
+        .box4{
+            background-color: darkblue;
+            text-align: center;
+            grid-column: span 4;
+            grid-row: 4;
+        }
+        .box5{
+            background-color: rgb(144, 242, 246);
+            text-align: center;
+             grid-row:7 ;
+            grid-column:span 4;
+        }
+        .box6{
+            background-color: rgb(4, 192, 120);
+            text-align: center;
+            /* grid-row:8 ; */
+            grid-column: span 4;
+            grid-row: 6;
+        }
+        .box7{
+            background-color: rgb(252, 252, 75);
+            text-align: center;
+            grid-column:  span 4;
+            grid-row: 5;
+        }   
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box1">HEADER</div>
+        <div class="box2">MENU</div>
+        <div class="box3">HERO</div>
+        <div class="box4">MAIN</div>
+        <div class="box5">IMAGE</div>
+        <div class="box6">EXTRA</div>
+        <div class="box7">BANNER</div>
+    </div>
+</body>
+</html>
